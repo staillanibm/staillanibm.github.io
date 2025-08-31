@@ -1,0 +1,19 @@
+- title: "LinkedIn group"
+  description: "Share ideas, ask questions, and stay current on everything happening with IBM’s webMethods Hybrid Integration platform."
+  url: "https://www.linkedin.com/groups/14753007/"
+  button_text: "Visit"
+
+- title: "From a centralized ESB <br>to fine-grained, agile integration"
+  description: "A great blog post which describes how integration adapts to agility by adopting cloud-native principles."
+  url: "https://kimjulianclark.medium.com/from-a-centralized-esb-to-fine-grained-agile-integration-f3d7a9b41c4c"
+  button_text: "Read"
+
+- title: "Accelerating Modernization <br>with Agile Integration"
+  description: "The Bible of modern integration. An IBM Redbook published 5 years ago, but the first 4 chapters explain very well the IWHI vision."
+  url: "https://www.redbooks.ibm.com/abstracts/sg248452.html"
+  button_text: "Read"
+
+- title: "IBM Integration Design and Architecture videos"
+  description: "A Youtube playlist of videos covering agile integration. Most of them are associated to CP4I, but are also very interesting in the context of IWHI."
+  url: "https://www.youtube.com/playlist?list=PL_4RxtD-BL5tYINDy6tntfYx4t6N7ulNe"
+  button_text: "Watch"

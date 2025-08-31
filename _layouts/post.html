@@ -1,0 +1,63 @@
+---
+layout: default
+---
+
+<article class="section">
+  <div class="container">
+    <div class="post-header fade-in">
+      <div class="post-meta">
+        <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: "%B %d, %Y" }}
+        </time>
+        {% if page.tags %}
+          <div class="post-tags">
+            {% for tag in page.tags %}
+              <span class="post-tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+        {% if page.read_time %}
+          <span class="post-read-time">{{ page.read_time }} min read</span>
+        {% endif %}
+      </div>
+      
+      <h1 class="post-title">{{ page.title }}</h1>
+      
+      {% if page.description %}
+        <p class="post-description">{{ page.description }}</p>
+      {% endif %}
+    </div>
+
+    <div class="post-content fade-in">
+      {{ content }}
+    </div>
+
+    <div class="post-footer fade-in">
+      <div class="post-navigation">
+        {% if page.previous %}
+          <div class="post-nav-item post-nav-prev">
+            <span class="post-nav-label">← Previous</span>
+            <a href="{{ page.previous.url | relative_url }}" class="post-nav-title">
+              {{ page.previous.title }}
+            </a>
+          </div>
+        {% endif %}
+        
+        {% if page.next %}
+          <div class="post-nav-item post-nav-next">
+            <span class="post-nav-label">Next →</span>
+            <a href="{{ page.next.url | relative_url }}" class="post-nav-title">
+              {{ page.next.title }}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="post-back-to-blog">
+        <a href="{{ '/blog/' | relative_url }}" class="btn btn--outline">
+          ← Back to Blog
+        </a>
+      </div>
+    </div>
+  </div>
+</article>

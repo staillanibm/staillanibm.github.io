@@ -1,0 +1,69 @@
+// Colors - IBM Design Language
+$primary-bg: #161616;        // IBM Gray 100
+$secondary-bg: #262626;      // IBM Gray 90
+$tertiary-bg: #393939;       // IBM Gray 80
+$card-bg: #262626;           // IBM Gray 90
+$border-color: #525252;      // IBM Gray 70
+
+$text-primary: #f4f4f4;      // IBM Gray 10
+$text-secondary: #c6c6c6;    // IBM Gray 30
+$text-muted: #8d8d8d;        // IBM Gray 50
+$text-dark: #161616;         // IBM Gray 100
+
+$accent-gold: #a6c8ff;       // IBM Blue 30
+$accent-teal: #d0e2ff;       // IBM Blue 10 (primary accent)
+$accent-blue: #d0e2ff;       // IBM Blue 10
+$accent-green: #42be65;      // IBM Green 50
+$ibm-blue: #d0e2ff;          // IBM Primary Blue
+
+// Typography - IBM Plex with better fallbacks
+$font-family-primary: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+$font-family-secondary: 'IBM Plex Serif', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+$font-family-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Courier New', monospace;
+
+// Specific font stacks for headings (better weight matching)
+$font-family-headings: 'IBM Plex Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.875rem;
+$font-size-base: 1rem;
+$font-size-lg: 1.125rem;
+$font-size-xl: 1.25rem;
+$font-size-2xl: 1.5rem;
+$font-size-3xl: 1.875rem;
+$font-size-4xl: 2.25rem;
+$font-size-5xl: 3rem;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Spacing
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-base: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+$spacing-2xl: 3rem;
+$spacing-3xl: 4rem;
+$spacing-4xl: 6rem;
+$spacing-5xl: 8rem;
+
+// Breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+
+// Transitions
+$transition-fast: 0.2s ease-in-out;
+$transition-base: 0.3s ease-in-out;
+$transition-slow: 0.5s ease-in-out;
+
+// Shadows
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);

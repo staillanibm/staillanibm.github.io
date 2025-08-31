@@ -1,0 +1,85 @@
+- title: "Hybrid Integration Platform"
+  tags: 
+    - "iPaaS"
+    - "Real-time"
+    - "Nocode"
+    - "Hybrid Integration"
+    - "API Management"
+    - "EDA"
+  description: |
+    An account change in Salesforce is propagated in real-time to a legacy on-premise CRM using a nocode workflow that implements secure hybrid connectivity. <br>
+    We also analyze the Salesforce account using OpenAI, produce an event in a Kafka topic and publish alerts to a Slack channel.
+  features:
+    - "Real-time insights"
+    - "Nocode service orchestration"
+    - "Easy connectivity to SaaS services"
+    - "Secure hybrid integration"
+    - "API security and governance"
+    - "End-to-end Monitoring"
+  hidden: false
+
+- title: "Integration microservice"
+  tags:
+    - "Cloud-native"
+    - "Microservice"
+    - "Kubernetes"
+    - "DevOps"
+    - "GitOps"
+    - "Observability"
+  description: "A contact management microservice is implemented using the webMethods Microservices Runtimes. It exposes standard REST API and events. Its CI/CD is fully automated using Github Actions and Argo CD."
+  features:
+    - "Versioning using Git"
+    - "Build of a container image"
+    - "External configuration"
+    - "Continuous integration using Github Actions"
+    - "Continuous delivery using Argo CD"
+    - "Observability using the Grafana stack"
+  hidden: false
+
+- title: "Integration for Agentic AI"
+  tags:
+    - "iPaaS"
+    - "Cloud"
+    - "SaaS Connectors"
+  description: "Modern cloud-based integration platform demonstration showing seamless connectivity between SaaS applications, on-premise systems, and hybrid cloud environments."
+  features:
+    - "SaaS Application Connectors"
+    - "Hybrid Cloud Integration"
+    - "Low-Code Development"
+  hidden: true
+
+- title: "Federated API Management"
+  tags:
+    - "Messaging"
+    - "Events"
+    - "Real-time"
+  description: "Advanced event-driven architecture demonstration featuring message streaming, event choreography, and real-time data processing with enterprise messaging systems."
+  features:
+    - "Message Streaming"
+    - "Event Choreography"
+    - "Real-time Analytics"
+  hidden: true
+
+- title: "Event Driven Architecture"
+  tags:
+    - "Messaging"
+    - "Events"
+    - "Real-time"
+  description: "Advanced event-driven architecture demonstration featuring message streaming, event choreography, and real-time data processing with enterprise messaging systems."
+  features:
+    - "Message Streaming"
+    - "Event Choreography"
+    - "Real-time Analytics"
+  hidden: true
+
+- title: "Multichannel B2B Integration"
+  tags:
+    - "Messaging"
+    - "Events"
+    - "Real-time"
+  description: "Advanced event-driven architecture demonstration featuring message streaming, event choreography, and real-time data processing with enterprise messaging systems."
+  features:
+    - "Message Streaming"
+    - "Event Choreography"
+    - "Real-time Analytics"
+  hidden: true

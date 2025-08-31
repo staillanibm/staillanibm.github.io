@@ -1,0 +1,54 @@
+# Technical configuration
+title: "Jekyll Site" # Fallback technique seulement
+description: "Jekyll-powered site" # SEO meta description - utilisé par les moteurs de recherche dans les snippets
+baseurl: "" # Sous-dossier si hébergé dans un path (ex: /mon-site)
+url: "https://staillanibm.github.io" # URL complète du site en production (pour les liens absolus)
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude files from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Collections and defaults
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Social links
+social:
+  linkedin: "stailland"
+  github: "staillanibm"
+
+# Form configuration
+forms:
+  staticforms_access_key: "sf_7dig3hg80magk1ccb21a1bb5"
+  recaptcha_site_key: "6Lc9ya8rAAAAAL-zLbCXgKnWRhv37g4zJrSW2mWU"
