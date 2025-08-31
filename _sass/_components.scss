@@ -493,10 +493,7 @@
   }
   
   &__btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: $spacing-xs;
+    display: block;
     background-color: $accent-teal;
     color: $text-dark;
     padding: $spacing-sm $spacing-base;
@@ -504,21 +501,16 @@
     text-decoration: none;
     font-size: $font-size-sm;
     font-weight: $font-weight-medium;
-    transition: all $transition-fast;
+    text-align: center;
     border: 2px solid $accent-teal;
     width: 100%;
+    box-sizing: border-box;
     
     &:hover {
       background-color: $accent-gold;
       border-color: $accent-gold;
       color: $text-dark;
-      transform: translateY(-1px);
       text-decoration: none;
-    }
-    
-    svg {
-      width: 16px;
-      height: 16px;
     }
   }
 }
