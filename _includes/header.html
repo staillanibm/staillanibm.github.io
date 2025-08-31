@@ -1,7 +1,7 @@
 <header class="header">
   <div class="container">
     <nav class="header__nav">
-      <a href="#hero" class="header__logo">{{ site.data.site.title }}</a>
+      <a href="{{ '/' | relative_url }}" class="header__logo">{{ site.data.site.title }}</a>
       
       <ul class="header__menu">
         {% for item in site.data.site.navigation %}
