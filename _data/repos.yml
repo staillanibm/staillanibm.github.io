@@ -1,0 +1,83 @@
+- title: "Deployment of the webMethods products using Helm"
+  description: >
+    Deploy the webMethods API Gateway, Developer Portal and Microservices Runtime in Kubernetes or OpenShift using Helm charts.
+  url: "https://github.com/staillanibm/sttDeployment"
+  products:
+    - "MSR"
+    - "APIM"
+  tags:
+    - "Kubernetes"
+    - "Helm"
+
+- title: "Contact Management Microservice"
+  description: >
+    This repository showcases the use of the webMethods Microservices Runtime (MSR) to implement an integration microservice.
+    <ul>
+      <li>exposes a classical CRUD REST API implemented in a contract first approach</li>
+      <li>persists its contact data in a Postgres database, via the JDBC adapter</li>
+      <li>produces Kafka events using webMethods Streaming</li>
+    </ul>
+  url: "https://github.com/staillanibm/sttContactManagement"
+  products:
+    - "MSR"
+  tags:
+    - "Microservice"
+    - "JDBC"
+    - "Kafka"
+    - "CI/CD"
+    - "Kubernetes"
+
+- title: "webMethods observability"
+  description: >
+    This repository contains various assets to showcase observability within the webMethods ecosystem:
+    <ul>
+    <li>a MSR integration package which exposes various API endpoints, grouped into a REST Observability API</li>
+    <li>a docker compose stack</li>
+    <li>some Kubernetes deployment manifests</li>
+    <li>a webMethods API GW proxy zip for the REST observability API</li>
+    <li>scripts to automate the invocation of the API</li>
+    <li>Grafana dashboards to observe the metrics exposed by the MSR, API GW and UM</li>
+    </ul>
+  url: "https://github.com/staillanibm/sttContactManagement"
+  products:
+    - "MSR"
+    - "UM"
+    - "APIM"
+  tags:
+    - "Prometheus"
+    - "Grafana"
+    - "Open Telemetry"
+    - "Jaeger"
+
+- title: "MSR image build using the IBM installer"
+  description: >
+    In some cases the official MSR base image cannot be used, for instance when you need features that cannot be installed with wpm yet. <br>
+    This repository contains scripts and descriptors to build a Microservices Runtime image using the IBM installer.
+  url: "https://github.com/staillanibm/sttMSRBuild"
+  products:
+    - "MSR"
+  tags:
+    - "Microservice"
+
+- title: "Build of a custom MSR base image using wpm"
+  description: >
+    This repo provides Dockerfiles to build a custom MSR base image using the webMethods Package Manager (wpm.)
+  url: "https://github.com/staillanibm/obsMSRBase"
+  products:
+    - "MSR"
+  tags:
+    - "Microservice"
+
+- title: "Deployment of an edge runtime"
+  description: >
+    This repo provides examples to deploy the webMethods Edge Runtime (which is no more than a specialized version of the MSR) in Kubernetes (using plain manifests) and Docker (using Docker Compose.) <br>
+    We use environment variables to connect to the webMethods Integration SaaS control plane (which is now part of the IWHI Hybrid Control Plane - HCP.) 
+  url: "https://github.com/staillanibm/sttEdgeRuntime"
+  products:
+    - "MSR"
+    - "Integration SaaS"
+    - "HCP"
+  tags:
+    - "Microservice"
+    - "Hybrid Integration"
+    - "Control Plane"

@@ -22,6 +22,8 @@ navigation:
     link: "#about"
   - name: "Experience" 
     link: "#experience"
+  - name: "Repos"
+    link: "/repos.html"
   # - name: "Demos"
   #   link: "/demos.html"
   - name: "Links"
