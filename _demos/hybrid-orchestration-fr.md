@@ -22,8 +22,15 @@ features:
 ---
 
 
-{% include video-player.html 
-   src="/assets/videos/IWHI_HybridOrchestration_fr.mp4" 
-   description="Démo orchestration hybride avec IWHI"
-   id="hybrid-demo" 
-%}
+<div class="video-container" style="margin: 2rem 0; max-width: 100%; border-radius: 8px; overflow: hidden;">
+  <iframe 
+    width="100%" 
+    height="400" 
+    src="https://www.youtube.com/embed/A1wwaZOOKp0" 
+    title="Orchestration Hybride avec IWHI"
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    allowfullscreen
+    style="display: block; border-radius: 8px;">
+  </iframe>
+</div>

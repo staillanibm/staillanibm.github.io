@@ -8,6 +8,7 @@
     id="player-{{ include.id | default: 'default' }}" 
     class="video-player" 
     controls 
+    preload="metadata"
     width="100%"
     style="display: block; max-width: 100%; height: auto;"
     {% if include.poster %}poster="{{ include.poster | relative_url }}"{% endif %}
@@ -27,23 +28,54 @@
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     console.log('Video player loaded for: player-{{ include.id | default: 'default' }}');
-    if (typeof Plyr !== 'undefined') {
-      console.log('Plyr is available, initializing...');
-      const player = new Plyr('#player-{{ include.id | default: 'default' }}', {
-        controls: [
-          'play-large',
-          'play',
-          'progress',
-          'current-time',
-          'duration',
-          'mute',
-          'volume',
-          'fullscreen'
-        ]
-      });
-      console.log('Plyr player initialized');
-    } else {
-      console.log('Plyr not found, using default HTML5 video');
+    
+    const videoElement = document.getElementById('player-{{ include.id | default: 'default' }}');
+    if (!videoElement) {
+      console.error('Video element not found');
+      return;
     }
+    
+    // Test if video can load
+    videoElement.addEventListener('loadstart', () => console.log('Video loading started'));
+    videoElement.addEventListener('error', (e) => {
+      console.error('Video error:', e);
+      // Show fallback message for GitHub Pages LFS issue
+      const container = videoElement.closest('.video-container');
+      if (container) {
+        container.innerHTML = '<div style="background: #1a1a1a; padding: 2rem; text-align: center; border-radius: 8px;">' +
+          '<h3 style="color: #f4f4f4; margin-bottom: 1rem;">{{ include.description | default: "Vidéo de démonstration" }}</h3>' +
+          '<p style="color: #c6c6c6; margin-bottom: 1.5rem;">La vidéo n\'est pas disponible sur GitHub Pages gratuit (limitation LFS).</p>' +
+          '<a href="mailto:stephane.tailland@ibm.com?subject=Demande vidéo démo&body=Bonjour, je souhaiterais voir la vidéo de démonstration." ' +
+          'class="btn btn--primary" style="display: inline-block; padding: 0.75rem 1.5rem; background: #0f62fe; color: white; text-decoration: none; border-radius: 4px;">Demander la vidéo par email</a>' +
+          '</div>';
+      }
+    });
+    
+    // Try to initialize Plyr if available
+    function initPlyr() {
+      if (typeof Plyr !== 'undefined') {
+        console.log('Plyr is available, initializing...');
+        const player = new Plyr(videoElement, {
+          controls: [
+            'play-large',
+            'play',
+            'progress',
+            'current-time',
+            'duration',
+            'mute',
+            'volume',
+            'fullscreen'
+          ]
+        });
+        console.log('Plyr player initialized');
+        
+        player.on('ready', () => console.log('Player is ready'));
+        player.on('error', (event) => console.error('Player error:', event));
+      } else {
+        console.log('Plyr not available, using HTML5 video');
+      }
+    }
+    
+    initPlyr();
   });
 </script>
