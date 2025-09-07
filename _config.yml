@@ -11,6 +11,11 @@ sass:
   sass_dir: _sass
   style: compressed
 
+# Localization
+plugins_dir: _plugins
+locale: en_US
+timezone: Europe/Paris
+
 # Plugins
 plugins:
   - jekyll-feed
@@ -31,6 +36,9 @@ collections:
   posts:
     output: true
     permalink: /:collection/:year/:month/:day/:title/
+  demos:
+    output: true
+    permalink: /:collection/:name/
 
 defaults:
   - scope:
@@ -42,6 +50,11 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+  - scope:
+      path: ""
+      type: "demos"
+    values:
+      layout: "demo"
 
 # Social links
 social:

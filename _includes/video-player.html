@@ -1,0 +1,49 @@
+<!-- Video Player -->
+<div class="video-container" style="margin: 2rem 0; max-width: 100%; background: #000; border-radius: 8px; overflow: hidden;">
+  {% if include.title %}
+    <h3 style="color: #f4f4f4; margin-bottom: 1rem; text-align: center;">{{ include.title }}</h3>
+  {% endif %}
+  
+  <video 
+    id="player-{{ include.id | default: 'default' }}" 
+    class="video-player" 
+    controls 
+    width="100%"
+    style="display: block; max-width: 100%; height: auto;"
+    {% if include.poster %}poster="{{ include.poster | relative_url }}"{% endif %}
+  >
+    <source src="{{ include.src | relative_url }}" type="video/mp4" />
+    {% if include.webm %}<source src="{{ include.webm | relative_url }}" type="video/webm" />{% endif %}
+    <p>Votre navigateur ne supporte pas la vidéo HTML5.</p>
+  </video>
+  
+  {% if include.description %}
+  <div class="video-info" style="margin-top: 1rem; text-align: center; padding: 0 1rem 1rem;">
+    <p style="color: #c6c6c6; font-size: 0.9rem;">{{ include.description }}</p>
+  </div>
+  {% endif %}
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('Video player loaded for: player-{{ include.id | default: 'default' }}');
+    if (typeof Plyr !== 'undefined') {
+      console.log('Plyr is available, initializing...');
+      const player = new Plyr('#player-{{ include.id | default: 'default' }}', {
+        controls: [
+          'play-large',
+          'play',
+          'progress',
+          'current-time',
+          'duration',
+          'mute',
+          'volume',
+          'fullscreen'
+        ]
+      });
+      console.log('Plyr player initialized');
+    } else {
+      console.log('Plyr not found, using default HTML5 video');
+    }
+  });
+</script>
