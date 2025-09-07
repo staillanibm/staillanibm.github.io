@@ -106,39 +106,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Contact form handling with reCAPTCHA v3
-  const contactForm = document.querySelector('.contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const submitButton = this.querySelector('.contact-form__submit');
-      const originalText = submitButton.textContent;
-      
-      // Show loading state
-      submitButton.textContent = 'Verifying...';
-      submitButton.disabled = true;
-      
-      // Execute reCAPTCHA v3
-      grecaptcha.ready(() => {
-        grecaptcha.execute('6Lc9ya8rAAAAAL-zLbCXgKnWRhv37g4zJrSW2mWU', {action: 'submit'}).then((token) => {
-          // Add the token to form
-          const tokenInput = document.createElement('input');
-          tokenInput.type = 'hidden';
-          tokenInput.name = 'g-recaptcha-response';
-          tokenInput.value = token;
-          this.appendChild(tokenInput);
-          
-          // Submit the form
-          submitButton.textContent = 'Sending...';
-          this.submit();
-        }).catch(() => {
-          // Re-enable button on error
-          submitButton.textContent = originalText;
-          submitButton.disabled = false;
-          alert('reCAPTCHA verification failed. Please try again.');
-        });
-      });
-    });
-  }
+  // Contact form is now handled by contact-form.js
 });

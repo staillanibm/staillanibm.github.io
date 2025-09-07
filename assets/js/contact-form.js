@@ -35,6 +35,9 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         formMessage.style.display = 'block';
         form.reset();
+        
+        // Scroll to message smoothly
+        formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
       } else {
         throw new Error('Form submission failed');
       }
