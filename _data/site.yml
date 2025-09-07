@@ -29,6 +29,6 @@ navigation:
   - name: "Links"
     link: "#links"
   - name: "Blog"
-    link: "/blog/"
+    link: "/blog.html"
   - name: "Contact"
     link: "#contact"
