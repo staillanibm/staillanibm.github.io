@@ -18,7 +18,23 @@ layout: default
       <div class="post-meta">
         <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">
           {% if page.lang == 'fr' %}
-            {{ page.date | french_date }}
+            {% assign day = page.date | date: "%-d" %}
+            {% assign month = page.date | date: "%-m" %}
+            {% assign year = page.date | date: "%Y" %}
+            {% case month %}
+              {% when '1' %}{{ day }} janvier {{ year }}
+              {% when '2' %}{{ day }} février {{ year }}
+              {% when '3' %}{{ day }} mars {{ year }}
+              {% when '4' %}{{ day }} avril {{ year }}
+              {% when '5' %}{{ day }} mai {{ year }}
+              {% when '6' %}{{ day }} juin {{ year }}
+              {% when '7' %}{{ day }} juillet {{ year }}
+              {% when '8' %}{{ day }} août {{ year }}
+              {% when '9' %}{{ day }} septembre {{ year }}
+              {% when '10' %}{{ day }} octobre {{ year }}
+              {% when '11' %}{{ day }} novembre {{ year }}
+              {% when '12' %}{{ day }} décembre {{ year }}
+            {% endcase %}
           {% else %}
             {{ page.date | date: "%B %d, %Y" }}
           {% endif %}
