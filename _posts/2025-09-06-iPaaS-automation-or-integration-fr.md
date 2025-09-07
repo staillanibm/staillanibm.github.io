@@ -16,6 +16,7 @@ Pour comprendre cette évolution, il convient de rappeler que l'intégration mod
 1. La connectivité technique : la "plomberie" qui permet aux systèmes de communiquer
 2. Les services de domaine : les briques métier standardisées et réutilisables, fondements des architectures composables
 3. La composition et l'orchestration : l'enchaînement intelligent des processus
+
 Le marketing actuel se concentre massivement sur cette troisième couche, particulièrement avec l'essor de l'IA agentique. 
 
 ##  SOA Revisité : Des Principes Toujours d'Actualité
