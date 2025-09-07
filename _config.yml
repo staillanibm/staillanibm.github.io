@@ -61,7 +61,7 @@ social:
   linkedin: "stailland"
   github: "staillanibm"
 
-# Form configuration
+# Form configuration - using environment variables for security
 forms:
-  staticforms_access_key: "sf_7dig3hg80magk1ccb21a1bb5"
-  recaptcha_site_key: "6Lc9ya8rAAAAAL-zLbCXgKnWRhv37g4zJrSW2mWU"
+  staticforms_access_key: "${STATICFORMS_ACCESS_KEY}"
+  recaptcha_site_key: "${RECAPTCHA_SITE_KEY}"
