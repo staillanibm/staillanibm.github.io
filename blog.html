@@ -24,7 +24,23 @@ title: Blog
             <div class="blog-card__meta">
               <time class="blog-card__date" datetime="{{ post.date | date_to_xmlschema }}">
                 {% if post.lang == 'fr' %}
-                  {{ post.date | french_date }}
+                  {% assign day = post.date | date: "%-d" %}
+                  {% assign month = post.date | date: "%-m" %}
+                  {% assign year = post.date | date: "%Y" %}
+                  {% case month %}
+                    {% when '1' %}{{ day }} janvier {{ year }}
+                    {% when '2' %}{{ day }} février {{ year }}
+                    {% when '3' %}{{ day }} mars {{ year }}
+                    {% when '4' %}{{ day }} avril {{ year }}
+                    {% when '5' %}{{ day }} mai {{ year }}
+                    {% when '6' %}{{ day }} juin {{ year }}
+                    {% when '7' %}{{ day }} juillet {{ year }}
+                    {% when '8' %}{{ day }} août {{ year }}
+                    {% when '9' %}{{ day }} septembre {{ year }}
+                    {% when '10' %}{{ day }} octobre {{ year }}
+                    {% when '11' %}{{ day }} novembre {{ year }}
+                    {% when '12' %}{{ day }} décembre {{ year }}
+                  {% endcase %}
                 {% else %}
                   {{ post.date | date: "%B %d, %Y" }}
                 {% endif %}
