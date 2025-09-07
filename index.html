@@ -115,11 +115,10 @@ title: Home
       <!-- Contact Form Column -->
       <div class="fade-in">
         <h3>Or via email</h3>
-        <form action="https://api.staticforms.xyz/submit" method="post" class="contact-form">
+        <form id="contactForm" class="contact-form">
           <input type="hidden" name="accessKey" value="{{ site.forms.staticforms_access_key }}">
           <input type="hidden" name="subject" value="New Contact Form Submission">
           <input type="hidden" name="replyTo" value="@">
-          <input type="hidden" name="redirectTo" value="thank-you.html">
           
           <div class="contact-form__group">
             <label for="name" class="contact-form__label">Name</label>
@@ -142,7 +141,12 @@ title: Home
                       placeholder="Tell me about your project or opportunity..."></textarea>
           </div>
           
-          <button type="submit" class="contact-form__submit">Send Message</button>
+          <button type="submit" class="contact-form__submit" id="submitBtn">
+            <span class="submit-text">Send Message</span>
+            <span class="submit-loading" style="display: none;">Sending...</span>
+          </button>
+          
+          <div id="formMessage" class="form-message" style="display: none; margin-top: 1rem;"></div>
         </form>
       </div>
     </div>
